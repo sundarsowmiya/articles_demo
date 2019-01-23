@@ -1,4 +1,4 @@
-# Article
+# Article demo project - Angular-v6.2.9 backend php and Mysql
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
