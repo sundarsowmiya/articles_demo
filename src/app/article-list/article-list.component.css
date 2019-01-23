@@ -1,16 +1,14 @@
-
-.modal-backdrop.fade{
+.modal-backdrop.fade {
     opacity: 0.5;
 }
-.modal-dialog{
-	padding: 20px;
-    background: #fff;
 
+.modal-dialog {
+    padding: 20px;
+    background: #fff;
 }
-.modal{
-	overflow: hidden !important;
+
+.modal {
+    overflow: hidden !important;
     opacity: 1;
     top: 70px;
-
 }
-        
