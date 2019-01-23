@@ -12,7 +12,6 @@ from 'rxjs';
 })
 
 export class TitleService {
-
-    pagesTitle = new EventEmitter < string > ();
+ pagesTitle = new EventEmitter < string > ();
 
 }
