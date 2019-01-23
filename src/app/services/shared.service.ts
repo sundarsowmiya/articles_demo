@@ -1,16 +1,22 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {
+    Injectable
+}
+from '@angular/core';
+import {
+    BehaviorSubject
+}
+from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
 export class SharedService {
 
-  private changeSource = new BehaviorSubject<boolean>(false);
-  currentData = this.changeSource.asObservable();
+    private changeSource = new BehaviorSubject < boolean > (false);
+    currentData = this.changeSource.asObservable();
 
-  constructor() { }
+    constructor() {}
 
-  changeData(data: boolean) {
-    this.changeSource.next(data)
-  }
+    changeData(data: boolean) {
+        this.changeSource.next(data)
+    }
 }
