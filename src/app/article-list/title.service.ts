@@ -1,13 +1,18 @@
-import { Injectable,EventEmitter } from '@angular/core';
-import { Subject }    from 'rxjs';
-
+import {
+    Injectable, EventEmitter
+}
+from '@angular/core';
+import {
+    Subject
+}
+from 'rxjs';
 
 @Injectable({
-    'providedIn':'root'
+    'providedIn': 'root'
 })
 
-export class TitleService{
-    
-    pagesTitle= new EventEmitter<string>();
- 
+export class TitleService {
+
+    pagesTitle = new EventEmitter < string > ();
+
 }
