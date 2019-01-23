@@ -1,52 +1,23 @@
 <div class="modal-backdrop fade in" style="height: 739px;position:fixed"></div>
 <div style="display: block;overflow: auto;opacity: 1;" class="modal fade in" id="portlet-config-edit-events.oppurid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <form [formGroup]="DeleteArticlForm" (ngSubmit)="deleteArticle(f)" #f>
-          <div id="oppoupdate-events.oppurid" class="alert alert-success alert-style" style="display:none;">
-            <h5>Updated Successfully. </h5>
-          </div>  
-          <div class="modal-header">
-              <h3 class="modal-title"><i class="mdi mdi-delete"></i> Delete Articl</h3>
-            <button type="button" (click)="backClicked()" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          
-          </div>
-          <div class="modal-body">    
-             Are you sure you want to delete?   
-          </div>
-          <div class="modal-footer">
-            
-            <button (click)="backClicked()" type="button" class="btn default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary modal-event">Delete</button>
-          </div>
-       </form>
-      </div>
+        <div class="modal-content">
+            <form [formGroup]="DeleteArticlForm" (ngSubmit)="deleteArticle(f)" #f>
+                <div id="oppoupdate-events.oppurid" class="alert alert-success alert-style" style="display:none;">
+                    <h5>Updated Successfully. </h5>
+                </div>
+                <div class="modal-header">
+                    <h3 class="modal-title"><i class="mdi mdi-delete"></i> Delete Articl</h3>
+                    <button type="button" (click)="backClicked()" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button (click)="backClicked()" type="button" class="btn default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary modal-event">Delete</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-  </div>
-
-<!--   <div class="modal-backdrop fade in" style="height: 739px;position:fixed"></div>
-<div style="display: block;overflow: auto;opacity: 1;" class="modal fade in" id="portlet-config-edit-associates.oppurid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      
-
-  
-                                                <div class="modal-content modal-filled bg-danger">
-                                                    <div class="modal-body p-4">
-                                                        <div class="text-center">
-                                                            <i class="dripicons-wrong h1"></i>
-                                                            <h4 class="mt-2">Are you Sure you wank to delete the data.</h4>
-                                                            <button (click)="backClicked()" type="button" class="btn btn-light my-2" data-dismiss="modal">Cancle</button>
-                              <button type="button" class="btn btn-light my-2" data-dismiss="modal">Ok Conform</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                          
-
-                                        </div>
-                                    </div>
-                                          
-                                      
-
-
- -->
+</div>
