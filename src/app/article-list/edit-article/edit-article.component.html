@@ -1,23 +1,17 @@
 <div class="modal-backdrop fade in" style="height: 739px;position:fixed"></div>
 <div style="display: block;overflow: auto !important; opacity: 1;top:20px;" class="modal fade in" id="portlet-config-edit-associates.oppurid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" style="margin-top: 135px;">
-
         <div class="modal-content">
-          
-                <div class="modal-header">
-                    <h3 class="modal-title"><i class="mdi mdi-square-edit-outline"></i >Edit Article</h3>
-                    <button type="button" (click)="backClicked()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="mdi mdi-square-edit-outline"></i >Edit Article</h3>
+                <button type="button" (click)="backClicked()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
 
-                </div>
-
-                 <form [formGroup]="EditArticleForm" (ngSubmit)="editarticle(currentEvents)">
-
-
+            <form [formGroup]="EditArticleForm" (ngSubmit)="editarticle(currentEvents)">
                 <div class="modal-body">
-
                     <div class="form-group">
                         <label for="title">Title </label><span style="color: red">*</span>
-                        <input type="text" formControlName="article_title" [(ngModel)]="currentEvents.article_title" id="article_title"  name="article_title" class="form-control" required />
+                        <input type="text" formControlName="article_title" [(ngModel)]="currentEvents.article_title" id="article_title" name="article_title" class="form-control" required />
                         <div class="alert alert-danger" *ngIf="article_title.touched && article_title.invalid">
                             <div *ngIf="article_title.errors.required"> Article Title is Required</div>
                         </div>
@@ -33,13 +27,8 @@
 
                     <div class="form-group">
                         <label for="article_descrip">Description</label><span style="color: red">*</span>
-                        <textarea formControlName="article_descrip"
-                         [(ngModel)]="currentEvents.article_descrip"
-                          id="article_descrip"
-                          name="article_descrip" 
-                          class="form-control"
-                           required ></textarea> 
-                      
+                        <textarea formControlName="article_descrip" [(ngModel)]="currentEvents.article_descrip" id="article_descrip" name="article_descrip" class="form-control" required></textarea>
+
                         <div class="alert alert-danger" *ngIf="article_descrip.touched && article_descrip.invalid">
                             <div *ngIf="article_descrip.errors.required"> Description is Required</div>
                         </div>
@@ -47,14 +36,8 @@
 
                     <div class="form-group">
                         <label for="article_tags">Tags</label><span style="color: red">*</span>
-                        <textarea 
-                        formControlName="article_tags"
-                          [(ngModel)]="currentEvents.article_tags"
-                           id="article_tags"
-                            name="article_tags"
-                             class="form-control"
-                              required ></textarea>
-                       
+                        <textarea formControlName="article_tags" [(ngModel)]="currentEvents.article_tags" id="article_tags" name="article_tags" class="form-control" required></textarea>
+
                         <div class="alert alert-danger" *ngIf="article_tags.touched && article_tags.invalid">
                             <div *ngIf="article_tags.errors.required"> Tags Name is Required</div>
                         </div>
@@ -62,11 +45,7 @@
 
                     <div class="form-group">
                         <label for="article_publish_date">Publish Date</label>
-                        <ejs-datetimepicker class="form-control" formControlName="article_publish_date"
-                         [(ngModel)]="currentEvents.article_publish_date"
-                          format='dd-MM-yyyy' 
-                           placeholder='Enter date'
-                            required>
+                        <ejs-datetimepicker class="form-control" formControlName="article_publish_date" [(ngModel)]="currentEvents.article_publish_date" format='dd-MM-yyyy' placeholder='Enter date' required>
                         </ejs-datetimepicker>
                         <div class="alert alert-danger" *ngIf="article_publish_date.touched && article_publish_date.invalid">
                             <div *ngIf="article_publish_date.errors.required">Publish Date is Required</div>
@@ -75,13 +54,11 @@
 
                     <div class="text-right">
                         <button (click)="backClicked()" type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
-                        <button type="submit"  [disabled]="EditArticleForm.invalid" class="btn btn-primary modal-event">Update</button>
-                        
-                    </div>
+                        <button type="submit" [disabled]="EditArticleForm.invalid" class="btn btn-primary modal-event">Update</button>
 
+                    </div>
                 </div>
             </form>
         </div>
     </div>
-
 </div>
