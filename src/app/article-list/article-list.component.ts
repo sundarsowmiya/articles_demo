@@ -78,10 +78,7 @@ from '../services/shared.service';
                 "url": config.gServiceUrl+"articles/read_articles.php",
                 "dataSrc":function ( json) {
                     console.log(json);
-                    let myJson= {
-                        data: []
-                    }
-                    ;
+                    let myJson= {data: []};
                     myJson.data.push(json.records) return myJson.data[0];
                 }
             }
