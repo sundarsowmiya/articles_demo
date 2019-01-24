@@ -34,11 +34,14 @@ const httpHeaders= {
 
 @Injectable( {
     providedIn: 'root'
-}
+}) 
 
-) export class ArticleService {
+export class ArticleService {
     articleAPIurl: any=config.gServiceUrl+"articles/create_article.php";
-    eventsAPIurl:any=config.gServiceUrl+"articles/read_article.php" eventseditAPIurl:any=config.gServiceUrl+"articles/update_article.php" eventsdeleteAPIurl:any=config.gServiceUrl+"articles/delete_article.php" constructor(private http: HttpClient) {}
+    eventsAPIurl:any=config.gServiceUrl+"articles/read_article.php";
+    eventseditAPIurl:any=config.gServiceUrl+"articles/update_article.php";
+    eventsdeleteAPIurl:any=config.gServiceUrl+"articles/delete_article.php";
+    constructor(private http: HttpClient) {}
     addarticle(data): Observable<ArticleTypes[]> {
         console.log(this.articleAPIurl, data, httpHeaders);
         return this.http.post<ArticleTypes[]>(this.articleAPIurl, data, httpHeaders)
