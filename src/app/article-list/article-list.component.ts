@@ -27,7 +27,7 @@ import {
 
 from 'rxjs';
 import * as config from '../../globalConfig';
-//import {TitleService} from 'title.service';
+
 import {
     SharedService
 }
