@@ -12,3 +12,10 @@
     opacity: 1;
     top: 70px;
 }
+.md-text-adj{
+    display:inline-block;
+    width:180px;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
